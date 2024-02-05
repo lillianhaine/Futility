@@ -149,7 +149,7 @@ draws_ss_mix_mem = function(dat, nMCMC1, nMCMC2,
 ########################################################## 
 ########################################################## 
 ## data generation
-data_generation = function(nRCT, nRWD, A, nX = 5,
+data_generation = function(nRCT, nRWD, A, nX = 3,
                            res_conf, cur_beta, mixing_param,
                            b0, tau, b0_pt, seed){
   #print(seed)
@@ -248,7 +248,7 @@ get_interim_dat = function(all_dat, int_perc){
   return(int_dat)
 }
 
-save_dat = function(nRCT, nRWD, A, nX = 5, 
+save_dat = function(nRCT, nRWD, A, nX = 3, 
                     res_conf, overlap_deg, nreps, no_cores){
     ### step 1: generate trial data: 
     if(overlap_deg == 1){
@@ -279,7 +279,7 @@ save_dat = function(nRCT, nRWD, A, nX = 5,
 ########################################################## 
 ########################################################## 
 ##  run a trial:
-run_trial = function(int_perc, theta, nRCT, nRWD, A, nX = 5, 
+run_trial = function(int_perc, theta, nRCT, nRWD, A, nX = 3, 
                      res_conf, overlap_deg, seed, num_cores, 
                      data_alt, data_null, int_flag, method, alt_ss = T){
   set.seed(seed)
